@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/duduk-meush/static/css/main.4b7655ff.chunk.css",
+    "main.js": "/duduk-meush/static/js/main.66ff441e.chunk.js",
+    "main.js.map": "/duduk-meush/static/js/main.66ff441e.chunk.js.map",
+    "runtime-main.js": "/duduk-meush/static/js/runtime-main.2eec6725.js",
+    "runtime-main.js.map": "/duduk-meush/static/js/runtime-main.2eec6725.js.map",
+    "static/js/2.46c53b8c.chunk.js": "/duduk-meush/static/js/2.46c53b8c.chunk.js",
+    "static/js/2.46c53b8c.chunk.js.map": "/duduk-meush/static/js/2.46c53b8c.chunk.js.map",
+    "index.html": "/duduk-meush/index.html",
+    "precache-manifest.0f2587d5559ccfaa584fe724d40c478e.js": "/duduk-meush/precache-manifest.0f2587d5559ccfaa584fe724d40c478e.js",
+    "service-worker.js": "/duduk-meush/service-worker.js",
+    "static/css/main.4b7655ff.chunk.css.map": "/duduk-meush/static/css/main.4b7655ff.chunk.css.map",
+    "static/js/2.46c53b8c.chunk.js.LICENSE.txt": "/duduk-meush/static/js/2.46c53b8c.chunk.js.LICENSE.txt",
+    "static/media/Logo.svg": "/duduk-meush/static/media/Logo.0b01dcf1.svg",
+    "static/media/facebook-messenger-white.svg": "/duduk-meush/static/media/facebook-messenger-white.01e535a9.svg",
+    "static/media/placeImage.jpg": "/duduk-meush/static/media/placeImage.4b41c851.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2eec6725.js",
+    "static/js/2.46c53b8c.chunk.js",
+    "static/css/main.4b7655ff.chunk.css",
+    "static/js/main.66ff441e.chunk.js"
+  ]
+}
