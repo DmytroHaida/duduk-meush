@@ -1,15 +1,14 @@
 import React from 'react';
-import NavBarItem from './NavBarItem';
 import { makeStyles } from "@material-ui/core/styles";
-
+import MenuListComposition from './menuList';
 
 const useStyles = makeStyles({
 	menuListWrapper: {
 		"& .MuiPaper-root": {
-			borderRadius: "0 0 5px 5px"
+			borderRadius: "0 0 5px 5px",
 		},
 		"& .MuiListItem-gutters": {
-			fontSize: "12px"
+			fontSize: "12px",
 		}
 	},
 	button: {
@@ -44,19 +43,22 @@ const NavigationBar = () => {
 
 	return (
 		<div className='navigationBarWrapper'>
-				<div className='navigationBarItems' >
-					<NavBarItem menuItemName={firstBottonMenuParameters}
+				<div className='navigation-bar-items'>
+					<MenuListComposition  
+						menuItemName={firstBottonMenuParameters}
 						classes={classes}
-						buttonName={"Нормативна база"}
-					/>
-					<NavBarItem menuItemName={secondBottonMenuParameters}
+						buttonName={"Наука"}
+					 />
+					 <MenuListComposition  
+						menuItemName={secondBottonMenuParameters}
 						classes={classes}
-						buttonName={"Підручники й посібники"}
-					/>
-					<NavBarItem menuItemName={thirdBottonMenuParameters}
+						buttonName={"Практика"}
+					 />
+					 <MenuListComposition  
+						menuItemName={thirdBottonMenuParameters}
 						classes={classes}
 						buttonName={"Теле- й радіоуроки"}
-					/>
+					 />
 				</div>
 		</div>
 

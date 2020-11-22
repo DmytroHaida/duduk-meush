@@ -1,44 +1,66 @@
-import React from 'react';
-import logo from '../../assets/img/Logo.svg';
-import nameLogo from '../../assets/img/lotus--v1.png';
+import React, { useEffect, useState } from 'react';
+import { NavLink, Link } from 'react-router-dom';
+import logo from '../../assets/img/icons/logo.png';
+import nameLogo from '../../assets/img/headerOvnerPhoto.png';
 import NavigationBar from './NavigationBar';
 const Header = () => {
+    let navigationBarStyle = "sticky-navigation-bar";
+    const [a, setA] =useState(false);
+
+    // useEffect(()=> {
+    //     window.addEventListener("scroll", toggleBodyClass)
+    //     toggleBodyClass();
+    // },[])
+    // const toggleBodyClass = () => {
+    //     if (window.scrollY > 62) {
+    //         setA(true)
+    //       console.log(navigationBarStyle)
+    //     }else {
+    //         setA(false)
+    //     }
+    //   }
     return (
-        <header>
+        <header className="header">
             <div className="hat-wrapper">
                 <div className="container">
                     <div className="hat">
-                        <div className="hatName">
-                            <img src={nameLogo} width="40px" alt=""/>
-                            <p>Д-М Ганна</p>
+                        <div className="hat-name">
+                            <img src={nameLogo} width="190px" alt="" />
                         </div>
-                        <ul>
-                            <li>
-                                <a href="">Головна</a>
-                            </li>
-                            <li>
-                                <a href="">Робота</a>
-                            </li>
-                            <li>
-                                <img src={logo} width="50px" alt="dd" />
-                            </li>
-                            <li>
-                                <a href="">Соцмережі</a>
-                            </li>
-                            <li>
-                                <a href="">Контакти</a>
-                            </li>
-                        </ul>
-                        <h4>social</h4>
+                       <div>
+                            <ul>
+                                <li>
+                                    <NavLink to="/">Головна</NavLink>
+    
+                                </li>
+                                <li>
+                                    <NavLink to="/Про_мене">Про Мене</NavLink>
+                                </li>
+                                <li>
+                                    <img src={logo} width="80px" alt="dd" />
+                                </li>
+                                <li >
+                                    <Link to="/" onClick={() => window.scrollTo({left:0, top: document.body.scrollHeight, behavior: "smooth"})}>Соцмережі</Link> 
+                                </li>
+                                <li onClick={() => window.scrollTo({left:0, top: document.body.scrollHeight, behavior: "smooth"})}>
+                                    <Link to="/">Контакти</Link>
+                                </li>
+                            </ul>
+                            <h1> Дидик-Меуш Ганна</h1>
+                       </div>
+                        <div className="hat-callback">
+                            <NavLink to="/Зворотний_зв’язок">Зворотний зв’язок</NavLink>
+                            <Link to="/" className="_login">Вхід</Link>
+                        </div>
                     </div>
                 </div>
             </div>
-            <nav className="navigation-bar-wrapper">
-                <div className="navigation-bar-content">
+            <nav  className={`navigation-bar-border${a ? navigationBarStyle : '' }`}>
+                <div className="navigation-bar-wrapper">
                     <div className="container">
                         <div className="navigation-bar">
                             <div className="navigation-bar-title">
-                                <h3>Останні Новини Цього сайту</h3>
+                                <h3>Новини Цього сайту</h3>
                                 <p>Головна &gt;</p>
                             </div>
                             <div className="navigation-bar-menu">

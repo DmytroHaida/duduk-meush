@@ -1,48 +1,83 @@
-.hat-wrapper {
+@import "./theme-costumise.scss";
+.header {
     background-color: #ffffff;
 }
 .hat {
-    font-family: 'Karla', sans-serif;
+    font-family: "Karla", sans-serif;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    h1 {
+        font-family: "Playfair Display", sans-serif;
+        text-align: center;
+        margin: 5px 0;
+        font-weight: 500;
+        font-size: 35px;
+        color: $primary-color;
+    }
     a {
-        color: #000000;
+        color: $hat-font-color;
         &:hover {
-            color: #2295d8;
+            color: $primary-color;
         }
     }
     ul {
         display: flex;
         align-items: center;
         font-size: 10px;
-        color: #000000;
+        color: $hat-font-color;
         text-transform: uppercase;
         li {
             padding: 0 15px;
         }
     }
-    h4 {
-        visibility: hidden;
-    }
-    .hatName {
+    .hat-name {
         font-size: 16px;
         font-weight: 500;
         margin: auto 0;
         text-align: center;
+        img {
+            display: block;
+        }
         p {
             margin: 0;
         }
+    }
+    .hat-callback {
+        display: flex;
+        align-items: center;
+    }
+    ._login {
+        margin: 0 0 auto;
+        padding: 2px 12px;
+        font-size: 14px;
+        border: 1px solid #ebebeb;
+        border-top: none;
+        border-radius: 0 0 4px 4px;
+        background-color: #ebebeb;
+        box-shadow: 0 0 3px 1px #c0bfbf;
+
+        
         
     }
 }
-.navigation-bar-wrapper {
+.sticky-navigation-bar {
+    border: none;
+    position: fixed;
+    padding-top: 0px;
+    margin-top: 0;
+    top: 0;
+    width: 100%;
+}
+
+.navigation-bar-border {
     border-top: 1px solid #ebebeb;
     border-bottom: 1px solid #ebebeb;
     padding: 7px 0;
-    margin-top: 5px;
 }
-.navigation-bar-content {
-    background-color: #2498db;
+.navigation-bar-wrapper {
+    background-color: $primary-color;
+    z-index: 2000;
     .navigation-bar {
         display: flex;
         justify-content: space-between;
@@ -54,7 +89,7 @@
             h3 {
                 text-transform: uppercase;
                 margin: 0;
-                font-family: 'Armata', sans-serif;
+                font-family: "Armata", sans-serif;
                 font-size: 24px;
                 font-weight: 400;
                 line-height: 20px;
@@ -63,16 +98,22 @@
             p {
                 margin: 5px 0 0;
                 font-size: 13px;
-                font-family: 'Karla', sans-serif;
+                font-family: "Karla", sans-serif;
             }
         }
         .navigation-bar-menu {
             margin-top: auto;
             margin-bottom: 0px;
-            .navigationBarItems {
+            .navigation-bar-items {
                 display: flex;
                 font-size: 12px;
                 outline: none;
+            }
+            .MuiListItem-button {
+                a {
+                    color: $primary-color;
+                    text-decoration: none;
+                }
             }
         }
     }

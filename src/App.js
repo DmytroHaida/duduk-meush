@@ -4,6 +4,7 @@ import './App.scss';
 import { Content } from './components/content/content';
 import { Footer } from './components/footer/footer';
 import Header from './components/header/header';
+import LoginContainer from './components/header/login/loginFormContainer';
 function App() {
 	return (
 		<BrowserRouter>
@@ -11,6 +12,7 @@ function App() {
 				<Header />
 				<Content/>
 				<Footer />
+				<LoginContainer />
 			</div>
 		</BrowserRouter>
 	);
