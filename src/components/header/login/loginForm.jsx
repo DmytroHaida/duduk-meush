@@ -5,7 +5,7 @@ import  googlePlus  from '../../../assets/img/icons/googlePlus.png'
 import { Link } from 'react-router-dom';
 const LoginForm = (props) => {
     return (
-        <div className="login-form-wrapper">
+        <div className="login-form-wrapper" style={{display: props.loginPopUp ? 'block' : 'none'}} >
             <form className="login-form" onSubmit={props.handleSubmit}>
                 <div>
                         Логін:
@@ -16,13 +16,13 @@ const LoginForm = (props) => {
                         <button>Увійти</button>
                         Через:<Link to="/">  <img src={ googlePlus } width="20px" alt="" /></Link>
                     </div>
-                    <Link to="/" >зареєструватися</Link>
+                    <Link to="/" onClick={()=> props.registrationPopupMode()} >зареєструватися</Link>
 
                 </div>
             </form>
-
+            <div className="login-form-close" onClick={()=> props.closePopUp(false)} ></div>
         </div>
     );
 }
-const LoginReduxForm = reduxForm({ form: 'feedback' })(LoginForm)
+const LoginReduxForm = reduxForm({ form: 'login' })(LoginForm)
 export default LoginReduxForm;

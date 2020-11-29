@@ -3,10 +3,14 @@ import { NavLink, Link } from 'react-router-dom';
 import logo from '../../assets/img/icons/logo.png';
 import nameLogo from '../../assets/img/headerOvnerPhoto.png';
 import NavigationBar from './NavigationBar';
-const Header = () => {
+import { loginPopupMode } from '../../redux/reducer/login-reducer';
+import { connect } from 'react-redux';
+const Header = (props) => {
     let navigationBarStyle = "sticky-navigation-bar";
-    const [a, setA] =useState(false);
-
+    const [a, setA] = useState(false);
+    const popupToggler = () => {
+        props.loginPopupMode(true)
+    }
     // useEffect(()=> {
     //     window.addEventListener("scroll", toggleBodyClass)
     //     toggleBodyClass();
@@ -27,11 +31,11 @@ const Header = () => {
                         <div className="hat-name">
                             <img src={nameLogo} width="190px" alt="" />
                         </div>
-                       <div>
+                        <div>
                             <ul>
                                 <li>
                                     <NavLink to="/">Головна</NavLink>
-    
+
                                 </li>
                                 <li>
                                     <NavLink to="/Про_мене">Про Мене</NavLink>
@@ -40,22 +44,22 @@ const Header = () => {
                                     <img src={logo} width="80px" alt="dd" />
                                 </li>
                                 <li >
-                                    <Link to="/" onClick={() => window.scrollTo({left:0, top: document.body.scrollHeight, behavior: "smooth"})}>Соцмережі</Link> 
+                                    <Link to="/" onClick={() => window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })}>Соцмережі</Link>
                                 </li>
-                                <li onClick={() => window.scrollTo({left:0, top: document.body.scrollHeight, behavior: "smooth"})}>
+                                <li onClick={() => window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })}>
                                     <Link to="/">Контакти</Link>
                                 </li>
                             </ul>
                             <h1> Дидик-Меуш Ганна</h1>
-                       </div>
+                        </div>
                         <div className="hat-callback">
                             <NavLink to="/Зворотний_зв’язок">Зворотний зв’язок</NavLink>
-                            <Link to="/" className="_login">Вхід</Link>
+                            <Link to="/" className="_login" onClick={() => popupToggler()} >Вхід</Link>
                         </div>
                     </div>
                 </div>
             </div>
-            <nav  className={`navigation-bar-border${a ? navigationBarStyle : '' }`}>
+            <nav className={`navigation-bar-border${a ? navigationBarStyle : ''}`}>
                 <div className="navigation-bar-wrapper">
                     <div className="container">
                         <div className="navigation-bar">
@@ -73,5 +77,7 @@ const Header = () => {
         </header>
     );
 }
-
-export default Header;
+const mapStateToProps = (state) => ({
+    modalToggler: state.login.modalToggler
+})
+export default connect(mapStateToProps, { loginPopupMode })(Header)
