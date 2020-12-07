@@ -36,21 +36,20 @@
 }
 .login-form-close {
     position: absolute;
-    right: 32px;
-    top: 32px;
-    width: 52px;
-    height: 52px;
-    background-color: rgb(136, 136, 136);
+    right: 12px;
+    top: 12px;
+    width: 32px;
+    height: 32px;
     &:hover {
         cursor: pointer;
     }
     &:before,&:after {
         position: absolute;
-        left: 25px;
+        left: 10px;
         content: " ";
-        height: 52px;
+        height: 32px;
         width: 2px;
-        background-color: rgb(255, 255, 255);
+        background-color: rgb(0, 0, 0);
     }
     &:before {
         transform: rotate(45deg);
@@ -61,4 +60,21 @@
     &:active {
         transform: scale(0.7);
     }
+}
+.login-form-footer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    button {
+        margin-right: 10px;
+        padding: 2px 16px;
+        cursor: pointer;
+    }
+    a {
+        img {
+            display: block;
+            margin-left: 5px;
+        }
+    }
+    
 }

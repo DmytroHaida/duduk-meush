@@ -3,9 +3,9 @@ import { reduxForm } from 'redux-form';
 import { FormField, Input } from '../../../common/formControls/FormsControls';
 
 const RegistrationForm = (props) => {
-    
+
     return (
-        <div className="login-form-wrapper" style={{display: props.registrationPopUp ? 'block' : 'none'}}  >
+        <div className="login-form-wrapper" style={{ display: props.registrationPopUp ? 'block' : 'none' }}  >
             <form className="login-form" onSubmit={props.handleSubmit}>
                 <div>
                     Імя:
@@ -18,8 +18,8 @@ const RegistrationForm = (props) => {
                         <button>Зареєструватись</button>
                     </div>
                 </div>
+                <div className="login-form-close" onClick={() => props.registrationPopupClose(false)} ></div>
             </form>
-            <div className="login-form-close" onClick={() => props.registrationPopupClose(false)} ></div>
         </div>
     );
 }

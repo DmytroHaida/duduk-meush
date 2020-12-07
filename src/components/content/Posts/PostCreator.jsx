@@ -23,7 +23,7 @@ const PostCreator = (props) => {
         setHeader(e.target.value)
     }
     const addCreatedPost = () => {
-
+        debugger
         const data = new FormData()
         data.append('BlogHeader', headerText)
         data.append('bodyText', bodyText)
@@ -58,7 +58,7 @@ const PostCreator = (props) => {
                     }
                     }
                 />
-                <button onClick={() => addCreatedPost} >Зберегти пост</button>
+                <button onClick={() => addCreatedPost()} >Зберегти пост</button>
             </div>
     )
 }
