@@ -5,6 +5,7 @@ import nameLogo from '../../assets/img/headerOvnerPhoto.png';
 import NavigationBar from './NavigationBar';
 import { loginPopupMode } from '../../redux/reducer/login-reducer';
 import { connect } from 'react-redux';
+
 const Header = (props) => {
     let navigationBarStyle = "sticky-navigation-bar";
     const [a, setA] = useState(false);

@@ -49,7 +49,6 @@ export const setCurrentPostsValue = (CurrentPostsValue) => ({ type: SET_EDIT_POS
 
 //thunk dispatch
 export const feedbackReducer = (obj) => {
-    debugger
     NewsPostsAPI.addFeedback(obj)
 }
 export const getPosts = (posts) => async (dispatch) => {
@@ -69,6 +68,5 @@ export const editPost = (obj) => async (dispatch) => {
     // await NewsPostsAPI.editPost(obj)
     // dispatch(getPosts());
 }
-
 
 export default PostsReducer;

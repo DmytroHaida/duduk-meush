@@ -31,6 +31,7 @@ export const registrationPopupClose = (e) => async (dispatch) => {
     dispatch(setRegistrationPopupMode(e))
 }
 export const registrationPopupMode = (e) => async (dispatch) => {
+    debugger
     dispatch(setRegistrationPopupMode(e))
 }
 export default LoginReducer;
