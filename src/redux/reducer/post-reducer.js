@@ -11,12 +11,20 @@ let initialState = {
             _id: 1,
             postImage: 'https://korali.info/uploads/images/default/osin.jpg',
             postHeader: 'Тут буде заголовок статті',
-            postText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Veniam quis officia temporibus omnis est laborum, accusamus et,labore animi eveniet velit neque eos optio quidem, sequi illo quaerat assumenda necessitatibus.',
+            postText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nemorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nemorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nemorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nemorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nemorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nemo illum laudantium, at velit vitae eius ex repudiandae quaerat sit inventore similique dolor sequi perspiciatis, in ipsa! Praesentium, rerusectetur adipisicing elit. Aspernatur nemo illum laudantium, at velit vitae eius ex repudiandae quaerat sit inventore similique dolor sequi perspiciatis, in ipsa! Praesentium, rerum ipsam!',
             createdAt: null,
             updatedAt: null
         },
         {
             _id: 2,
+            postImage: 'https://korali.info/uploads/images/default/osin.jpg',
+            postHeader: 'Тут буде заголовок статті',
+            postText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nemorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nemorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nemorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nemorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nemorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nemo illum laudantium, at velit vitae eius ex repudiandae quaerat sit inventore similique dolor sequi perspiciatis, in ipsa! Praesentium, rerusectetur adipisicing elit. Aspernatur nemo illum laudantium, at velit vitae eius ex repudiandae quaerat sit inventore similique dolor sequi perspiciatis, in ipsa! Praesentium, rerum ipsam!',
+            createdAt: null,
+            updatedAt: null
+        },
+        {
+            _id: 3,
             postImage: 'https://korali.info/uploads/images/default/osin.jpg',
             postHeader: 'Тут буде заголовок статті',
             postText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Veniam quis officia temporibus omnis est laborum, accusamus et,labore animi eveniet velit neque eos optio quidem, sequi illo quaerat assumenda necessitatibus.',
