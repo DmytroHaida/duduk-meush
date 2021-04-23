@@ -15,6 +15,7 @@
     "draftjs-to-html": "^0.9.1",
     "gh-pages": "^3.1.0",
     "moment": "^2.29.1",
+    "node-sass": "4.14.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-draft-wysiwyg": "^1.14.5",
@@ -23,8 +24,7 @@
     "react-scripts": "3.4.3",
     "redux": "^4.0.5",
     "redux-form": "^8.3.6",
-    "redux-thunk": "^2.3.0",
-    "node-sass": "4.14.1"
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",

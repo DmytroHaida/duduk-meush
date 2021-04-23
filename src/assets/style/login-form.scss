@@ -45,9 +45,9 @@
     }
     &:before,&:after {
         position: absolute;
-        left: 10px;
+        left: 15px;
         content: " ";
-        height: 32px;
+        height: 30px;
         width: 2px;
         background-color: rgb(0, 0, 0);
     }
@@ -58,7 +58,7 @@
         transform: rotate(-45deg);
     }
     &:active {
-        transform: scale(0.7);
+        transform: scale(0.9);
     }
 }
 .login-form-footer {

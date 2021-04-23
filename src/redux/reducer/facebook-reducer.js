@@ -25,7 +25,6 @@ export const setFacebookPosts = (facebookPosts) => ({ type: SET_FACEBOOK_POSTS, 
 export const facebookGetPosts = () => async (dispatch) => {
     let facebookPosts = await facebookAPI.facebookPosts()
     dispatch(setFacebookPosts(facebookPosts.data.posts.data)) 
-
 }
 
 

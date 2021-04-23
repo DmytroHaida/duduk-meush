@@ -29,7 +29,6 @@ const NewPostContainer = (props) => {
                 deletePost={deletePost}
                 postEditor={postEditor}
             />
-
         </div>
     )
 }

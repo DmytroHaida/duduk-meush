@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 // import moment from 'moment';
 // import 'moment/locale/uk';
 import PostEditor from './PostEditor';
@@ -16,6 +16,7 @@ const Posts = (props) => {
 
     }
     const expandContent = (e) => {
+
         expanded === e ? setExpanded(null) : setExpanded(e)
     }
     const initialValueForEdit = (id, Image, Header, Body) => {
@@ -38,12 +39,12 @@ const Posts = (props) => {
                     </div>
                     <h4>{n.postHeader}</h4>
                     {n._id === expanded
-                        ? <p className="post-expanded" dangerouslySetInnerHTML={{ __html: n.postText }}></p>
+                        ? <p style= {{display: "block"}} dangerouslySetInnerHTML={{ __html: n.postText }}></p>
                         : <p dangerouslySetInnerHTML={{ __html: n.postText }}></p>
                     }
                     <div className="post-footer">
                         <div>Час Створення</div>
-                        {console.log('ddd')}
+                        {console.log('Render')}
                     </div>
                     {isAdmin === true
                         ? <div className="post-footer">
